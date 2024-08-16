@@ -3590,3 +3590,72 @@ li{
 #w-node-b49dd15f-01df-1325-f7e5-bcc60fab26c7-dc1ec2b9, #w-node-_7c429e4a-6d22-fa72-5bf9-3d202c973123-dc1ec2b9, #w-node-_6eb29d13-eb3a-a664-82af-ab6007c84daf-dc1ec2b9, #w-node-_5fd398e8-91bc-85c5-f4f8-f3349df8388e-dc1ec2b9, #w-node-d805555c-d809-e9ae-1085-df3ff1a57f8a-dc1ec2b9, #w-node-_1701d628-c456-977f-7610-8733e4086f84-dc1ec2b9, #w-node-_6f3eae01-c846-6e5a-e361-9863413d25f3-dc1ec2b9, #w-node-a67fc82c-de55-8ff8-8970-16f02bbe1ff0-dc1ec2b9, #w-node-ad8335db-9a21-8f54-e08b-8e58d0b2a319-dc1ec2b9, #w-node-_9413c86a-6bf3-21dc-f6f2-03774e0709d6-dc1ec2b9, #w-node-a53fba5a-d174-c4db-56ea-fbf138c12dad-dc1ec2b9, #w-node-_4a7b0475-d7eb-44d2-418d-275ed83b4a40-dc1ec2b9, #w-node-d431dc0e-b6ca-6742-7d4d-305d01ed4cba-dc1ec2b9, #w-node-_49a61688-773b-63e7-1af6-016d3eedee7c-dc1ec2b9, #w-node-_50deab2a-b8f6-d845-9bf2-97ebbfdc6b56-dc1ec2b9, #w-node-af2f96fb-a28d-8904-ab33-a902091ad2d3-dc1ec2b9, #w-node-_62b6e78e-8619-0140-837c-3b7b4c4d1f9d-4c4d1f89, #w-node-_62b6e78e-8619-0140-837c-3b7b4c4d1faa-4c4d1f89, #w-node-_62b6e78e-8619-0140-837c-3b7b4c4d1fb2-4c4d1f89, #w-node-_62b6e78e-8619-0140-837c-3b7b4c4d1fb4-4c4d1f89, #w-node-_62b6e78e-8619-0140-837c-3b7b4c4d1fb6-4c4d1f89, #w-node-_4b735289-f745-c6c4-5b2d-69a55f37b3bf-e13922a0, #w-node-_49128ab9-c4fa-9fa7-edd8-090a17df0c27-e13922a0, #w-node-b1ec73b9-d63d-b26d-d111-07d444191fe2-e13922a0, #w-node-_48d712d9-d974-0cf4-bd79-7aa230af4253-e13922a0, #w-node-_7342980d-63c3-b5b3-e599-11a223a5f585-e13922a0, #w-node-_073b2c14-9479-6bf2-b2a3-8ff5a961efc2-e13922a0, #w-node-_5376c285-d7d1-6aad-ff72-417f12c0cd4e-e13922a0 {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
+
+
+.suggestions-section {
+  padding: 60px 0;
+  background-image: linear-gradient(rgba(36,107,174, .8), rgba(36,107,174, .8)), url("../assets/background.jpg");
+}
+
+.suggestions-form {
+  background-color: #f9f9f9; /* Color de fondo para el formulario */
+  padding: 20px; /* Espaciado interno del formulario */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  max-width: 800px; /* Ancho máximo del formulario */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+.suggestions-form .form-group {
+  margin-bottom: 20px; /* Espaciado entre los grupos de formulario */
+}
+
+.suggestions-form label {
+  font-size: 1.25em; /* Tamaño de fuente para las etiquetas */
+  color: #333; /* Color de las etiquetas */
+  margin-bottom: 10px; /* Espaciado inferior de las etiquetas */
+  display: block; /* Asegura que las etiquetas ocupen toda la línea */
+}
+
+.suggestions-form input,
+.suggestions-form select,
+.suggestions-form textarea {
+  width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
+  padding: 10px; /* Espaciado interno de los campos */
+  border: 1px solid #ccc; /* Bordes para los campos */
+  border-radius: 4px; /* Bordes redondeados para los campos */
+  font-size: 1em; /* Tamaño de fuente para los campos */
+}
+
+.suggestions-form button {
+  background-color: #246bae; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border: none; /* Sin borde para el botón */
+  border-radius: 4px; /* Bordes redondeados para el botón */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  font-size: 1.25em; /* Tamaño de fuente para el botón */
+}
+
+.suggestions-form button:hover {
+  background-color: #1d5b91; /* Cambia el color de fondo cuando el mouse está sobre el botón */
+}
+
+.suggestions-section .h6-heading.sub-heading {
+  font-size: 1.5em; /* Tamaño de fuente para el subtítulo */
+  color: #fff; /* Color del subtítulo */
+}
+
+.suggestions-section .h2-heading.suggestions-heading {
+  font-size: 2em; /* Tamaño de fuente para el título principal */
+  color: #fff; /* Color del título */
+  margin-bottom: 20px; /* Espaciado inferior del título */
+}
+
+.suggestions-section .paragraph {
+  font-size: 1.1em; /* Tamaño de fuente para el párrafo */
+  color: #eee; /* Color del texto del párrafo */
+  margin-bottom: 40px; /* Espaciado inferior del párrafo */
+  text-align: center; /* Alinea el texto del párrafo al centro */
+}
+

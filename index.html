@@ -9,6 +9,7 @@
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
         <script src="./scripts/slides.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script src="./scripts/email.js" type="text/javascript"></script>
         <script type="text/javascript">
             WebFont.load({
@@ -40,7 +41,7 @@
                         <a href="#values" class="nav-link w-nav-link">Misión, Visión, Valores</a>
                         <a href="#services" class="nav-link w-nav-link">Servicios</a>
                         <a href="#certifications" class="nav-link w-nav-link">Capacitaciones</a>
-                        <a href="#" class="common-button w-inline-block">
+                        <a href="#contact" class="common-button w-inline-block">
                             <div>Contactanos</div>
                         </a>
                     </nav>
@@ -246,9 +247,10 @@
                             <a href="#services" class="paragraph-white link">Servicios</a>
                             <a href="#certifications" class="paragraph-white link">Capacitaciones</a>
                             <a href="#contact" class="paragraph-white link">Contactanos</a>
+                            <a href="/quejas-sugerencias" class="paragraph-white link">Quejas y Sugerencias</a>
                         </div>
                         <div id="w-node-_62b6e78e-8619-0140-837c-3b7b4c4d1faa-4c4d1f89" data-w-id="62b6e78e-8619-0140-837c-3b7b4c4d1faa" class="footer-card">
-                            <h4 class="h4-heading footer-hading">Contactanos</h4>
+                            <h4 class="h4-heading footer-hading">Contáctanos</h4>
                             <div class="w-form">
                                 <form id="email-form" name="email-form">
                                     <div class="w-layout-grid contact-field">
@@ -268,46 +270,19 @@
                                     <textarea placeholder="Mensaje" maxlength="5000" id="message" name="message" class="text-field message-box w-input" required></textarea>
                                     <input type="submit" data-wait="Por favor espere..." class="common-button button-color cta-button w-button" value="Enviar Mensaje" />
                                 </form>
-
-                                <script>
-                                    document.getElementById('email-form').addEventListener('submit', function(event) {
-                                        event.preventDefault();  // Prevenir el envío del formulario
-                                        
-                                        // Obtener los valores de los campos del formulario
-                                        const name = document.getElementById('name').value;
-                                        const email = document.getElementById('email').value;
-                                        const number = document.getElementById('number').value;
-                                        const city = document.getElementById('city').value;
-                                        const message = document.getElementById('message').value;
-                                        
-                                        // Construir el enlace para Gmail
-                                        const recipient = 'johernandezvaz@gmail.com';
-                                        const subject = encodeURIComponent('Contacto desde el formulario');
-                                        const body = encodeURIComponent(
-                                            `Nombre Completo: ${name}\n` +
-                                            `Correo Electrónico: ${email}\n` +
-                                            `Número de contacto: ${number}\n` +
-                                            `Ciudad: ${city}\n\n` +
-                                            `Mensaje:\n${message}`
-                                        );
-                                        
-                                        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
-                                        
-                                        // Abrir Gmail en una nueva ventana
-                                        window.open(gmailUrl, '_blank');
-                                        
-                                    });
-
-                                </script>
-
+                        
+                                <div id="responseMessage" class="response-message"></div>
                                 <div class="w-form-done">
-                                    <div>Gracias! Hemos recibido tu mensaje!</div>
+                                    <div>¡Gracias! Hemos recibido tu mensaje.</div>
                                 </div>
                                 <div class="w-form-fail">
                                     <div>Oops! Algo ha salido mal.</div>
                                 </div>
                             </div>
                         </div>
+                        <script src="./scripts/email.js">
+
+                        </script>
                     </div>
                 </div>
             </div>
