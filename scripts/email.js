@@ -1,5 +1,8 @@
-function sendEmail(event) {
-    event.preventDefault();  // Prevenir el envío del formulario
+// Inicializa EmailJS con tu USER_ID
+emailjs.init("OymTMs4wyLL2auEw7");
+
+document.getElementById('email-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevenir el envío predeterminado del formulario
 
     // Obtener los valores de los campos del formulario
     const name = document.getElementById('name').value;
@@ -8,17 +11,23 @@ function sendEmail(event) {
     const city = document.getElementById('city').value;
     const message = document.getElementById('message').value;
 
-    // Construir el enlace mailto
-    const recipient = 'johernandezvaz@gmail.com';
-    const subject = encodeURIComponent('Contacto desde el formulario');
-    const body = encodeURIComponent(
-        `Nombre Completo: ${name}\n` +
-        `Correo Electrónico: ${email}\n` +
-        `Número de contacto: ${number}\n` +
-        `Ciudad: ${city}\n\n` +
-        `Mensaje:\n${message}`
-    );
+    // Prepara los parámetros para enviar con EmailJS
+    const params = {
+        name: name,
+        email: email,
+        number: number,
+        city: city,
+        message: message
+    };
 
-    // Abrir el enlace mailto
-    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-}
+    // Enviar el correo usando EmailJS
+    emailjs.send("service_xb5qah1", "template_rduhoii", params)
+    .then(function(response) {
+        // Mostrar mensaje de éxito
+        document.getElementById("email-form").style.display = "none";
+        document.getElementById("responseMessage").innerHTML = "<p>¡Gracias! Hemos recibido tu mensaje.</p>";
+    }, function(error) {
+        // Mostrar mensaje de error
+        document.getElementById("responseMessage").innerHTML = "<p>Oops! Algo ha salido mal.</p>";
+    });
+});
