@@ -3,6 +3,7 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://asecalab.com'),
   title: 'ASE-CA LAB - Pruebas Mecánicas',
   description: 'Laboratorio de Pruebas Mecánicas - Asesoría y Capacitación de Ensayos Mecánicos',
   keywords: 'pruebas mecánicas, laboratorio, ensayos mecánicos, metalografía, microscopía óptica',
@@ -66,10 +67,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <Script
-          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-          strategy="beforeInteractive"
-        />
+        <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
       <body>{children}</body>
     </html>
