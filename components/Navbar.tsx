@@ -90,7 +90,7 @@ const Navbar = () => {
                 className="bg-accent text-white px-4 py-2 rounded-md font-semibold hover:bg-opacity-90 transition-colors duration-300 text-center"
                 onClick={() => setIsOpen(false)}
               >
-                Contáctanos
+                Contáctanos 
               </a>
             </div>
           </div>
@@ -101,3 +101,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+  
