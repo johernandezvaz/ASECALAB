@@ -45,6 +45,8 @@ const Announcements = () => {
             />
           </motion.div>
 
+        /* Comentario para el push */
+
           {/* CTA */}
           <div className="px-6 py-8 text-center">
             <Link
