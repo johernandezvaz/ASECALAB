@@ -99,12 +99,12 @@ const Footer = () => {
             <p className="text-white/70">
               Creado por{' '}
               <a
-                href="https://maikua.com.mx/"
+                href="https://silqapps.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent_2 hover:text-accent/80 transition-colors duration-300"
               >
-                Maikua
+                SilqApps
               </a>
             </p>
           </div>
